@@ -35,7 +35,6 @@ $firebase->child('/users/ron/email').set('ron@test.com');
 ### Other
 
 ```php
-
 // Set
 $firebase->child('/users/ron')->set([ 'id' => 1,'name' => 'Ron' ]);
 
