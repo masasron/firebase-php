@@ -35,8 +35,6 @@ $firebase->child('/users/ron/email').set('ron@test.com');
 ### Other
 
 ```php
-// Get
-$firebase->child('/users/ron')->get();
 
 // Set
 $firebase->child('/users/ron')->set([ 'id' => 1,'name' => 'Ron' ]);
@@ -48,6 +46,9 @@ $firebase->child('/users/ron/name')->set('Ronald');
 $liks = $firebase->child('/users/ron/liks');
 $liks.push('PHP');
 $liks.push('Firebase');
+
+// Get
+$user = $firebase->child('/users/ron')->get();
 
 // Delete
 $firebase->child('/users/ron')->delete();
