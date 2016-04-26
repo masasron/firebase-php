@@ -1,2 +1,1 @@
-# firebase-php
-Firebase PHP Client
+# Firebase PHP Client
