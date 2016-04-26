@@ -1,25 +1,21 @@
 {
-  "name": "ktamas77/firebase-php",
-  "description": "Firebase PHP Client",
-  "homepage": "https://github.com/masasron/firebase-php",
-  "keywords": [
-    "firebase",
-    "REST",
-    "firebase php",
-    "firebase php client"
-  ],
-  "version": "1.0.0",
-  "authors": [
-    {
-      "name": "Ron Masas",
-      "email": "ronmasas@gmail.com"
+    "repositories": [ {
+        "type": "package",
+        "package": {
+            "name": "masasron/firebase-php",
+            "description": "Firebase PHP Client",
+            "version": "1.0.0",
+            "source": {
+                "url": "https://github.com/masasron/firebase-php.git",
+                "type": "git",
+                "reference": "master"
+              }
+         }
+    }],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+      "classmap": ["src"]
     }
-  ],
-  "license": "MIT",
-  "require": {
-    "php": ">=5.3.0"
-  },
-  "autoload": {
-    "classmap": ["src"]
-  }
 }
