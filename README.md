@@ -14,9 +14,9 @@ composer require masasron/firebase-php dev-master
 
 $firebase = new \Firebase\Client('https://test123.firebaseio.com');
 
-$firebase->set([ 'message' => [] ]);
+$firebase->set([ 'messages' => [] ]);
 
-$messagesRef = $firebase->child('/message');
+$messagesRef = $firebase->child('/messages');
 
 $messagesRef->push('Foo');
 $messagesRef->push('Bar');
