@@ -3,6 +3,8 @@
 namespace Firebase;
 
 use Exception;
+use Firebase\Token\TokenException;
+use Firebase\Token\TokenGenerator;
 
 /**
  * Firebase PHP Client
@@ -29,6 +31,40 @@ class Client
         $this->_host = $host;
         $this->_token = $token;
         $this->_timeout = $timeout;
+    }
+
+    /**
+     * Generate a token generator
+     *
+     * @param string $host
+     * @param mixed $token
+     * @param integer $timeout
+     * @return Firebase\Client
+     */
+    public static function make($host, $token = false, $timeout = 10)
+    {
+        return new static($host, $token, $timeout);
+    }
+
+    /**
+     * Generate access token
+     *
+     * @param string $secret
+     * @param array $object
+     * @return TokenGenerator
+     */
+    public static function generateToken($secret, $object)
+    {
+        try
+        {
+            return (new TokenGenerator($secret))
+                            ->setData($object)
+                            ->create();
+        } catch (TokenException $e)
+        {
+            $e->getMessage();
+            return false;
+        }
     }
 
     /**
