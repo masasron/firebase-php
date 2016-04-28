@@ -34,7 +34,7 @@ class Client
     }
 
     /**
-     * Generate a token generator
+     * Make a new instace of Firebase\Client
      *
      * @param string $host
      * @param mixed $token
