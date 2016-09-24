@@ -42,8 +42,9 @@ $firebase->child('/users/ron')->set([ 'id' => 1,'name' => 'Ron' ]);
 $firebase->child('/users/ron/name')->set('Ronald');
 
 // Push
-$liks = $firebase->child('/users/ron/liks');
+$liks = $firebase->child('/users/ron/likes');
 $liks->push('PHP');
+$liks->push('Laravel');
 $liks->push('Firebase');
 
 // Get
